@@ -32,3 +32,5 @@ https://www.geeksforgeeks.org/complexity-different-operations-binary-tree-binary
 https://uwyo.instructure.com/courses/593273/files/folder/slides?preview=86250260 (Slide 55)
 
 class topics and notes
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice."
