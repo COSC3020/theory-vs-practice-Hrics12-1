@@ -3,10 +3,16 @@
 - List 3 reasons why asymptotic analysis may be misleading with respect to
   actual performance in practice.
 
-  1. We drop the lower order terms when doing asymptotic analysis and these could have actual impact on prefomance in real practice. 
-  2. In asymptotic analiysis we treat all constants at the same rate. When in practice constants can take different amounts of time. Like comparing strings takes longer then comparing integers.
-  3. Input size also makes a difference. If you look that the lecture slides and see the graph for "Average case running times" you see that Timsort takes a longer amount of time to sort a list size of ≈62500 items then heap sort. Then the amount of time levels out between the two sorting types before timsort rises, timsort again take more time as the list size grows. This shows that when you take bounds for asymptotic analysis, it will not always reflect what the best algorithm is for each individuel case when using it in practice.
-     Loose and tight bounds can be the difference. You can have bounds like a loose $O$ bound $f(n) \in O(n^2), f(n) \in O(n^3), f(n) \in O(2^n)$. It meets the criteria in therory but doesn't give a very good explanation so finding a tighter $O$ bound would be better in practice.
+  1.Dropping constants and lower order terms 2.Input size:\
+  \
+  We drop and disregard the lower order terms when doing asymptotic analysis and these could have actual impact on performance in real practice. So let's say we have $3n^3 + 2n^2 + 50n + 100$. When you do asymptotic analysis we are only focusing on the term with the highest growth rate. $3n^3$ has the highest growth rate. We would disregard the lower order terms and constant giving us a complexity of $O(n^3)$. This is good for large input sizes but the lower order terms and the constant could effect this with smaller input sizes. If this algorithm had a constant factor of 3 we would have $3n^3$ and we have a second algorithm that's $O(n^2)$ with a constant factor of 100.\
+    1st. $3(10^3) = 3000$\
+    2nd. $100(10^2) = 10,000$\
+  So the first algorithm is faster with a smaller input size, if we make the first input size the same as the second n=100, then we see the $n^3$ grows much faster and becomes slower then the 2nd algorithm. This is why input size matters and why the complexity can show the scaling of an algorithm but disregarding the constant factors can be misleading. An algorithm with a lower asymptotic complexity can be slower if it has a larger constant factor.
+     
+
+2. In asymptotic analiysis we treat all constants at the same rate. When in practice constants can take different amounts of time. Like comparing strings takes longer then comparing integers.
+    
 
 - Suppose finding a particular element in a binary search tree with 1,000
   elements takes 5 seconds. Given what you know about the asymptotic complexity
@@ -20,7 +26,7 @@ Having $O(log_2n)$ as the asymptotic complexity for searching for a specific ele
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
   
-  1.The asymptotic anaylisis is $log_n$ for a binary tree. If we assume that the element is near the begining of the tree and alos assume good implentation then it should take less then 5 secs to find the specific element. This shows that the implentation isn't good. So if the best case is the element is near the begining of the tree take 6.7 secs then if the element was much deeper in the tree the this could account for the 100 second runtime.
+  1.The asymptotic anaylisis is $log_n$ for a binary tree. If we assume that the element is near the begining of the tree and also assume good implentation then theoretically it should take around 6.7 secs. If the tree is not balanced, then the height of the tree could be larger then $log_2(n)$. This is a reason why it could take 100 secs.
 
   2. Computing hardware is an obvious reason this could happen. If you run the same search on two different machines with different specs then this could cause the difference in analysis because the hardware is not taken into account for the asymptotic complexity. This is becuase we assume that each comparison in the binary tree takes the exact same amount of time. 
 
