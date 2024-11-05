@@ -39,7 +39,9 @@ Having $O(log_2n)$ as the asymptotic complexity for searching for a specific ele
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
   
-  1.The asymptotic anaylisis is $log_n$ for a binary tree. If we assume that the element is near the begining of the tree and also assume good implentation then theoretically it should take around 6.7 secs. If the tree is not balanced, then the height of the tree could be larger then $log_2(n)$ and doesn't grow logarithmically. This is a reason why it could take 100 secs.
+  1.The asymptotic anaylisis is $log_n$ for a binary tree. If the binary search tree is not as efficent as $log n$ and is unbalanced it could result in a linear search time $O(n)$. For 10,000 elements this would increase the time dramatically.\
+  2.The hardware side where memory caches and CPUs are not taken into account. If the tree is stored on a hard drive on one machine and in the RAM on a second machine. You woudl see time increases because of the access times.
+  3. 
 
  
 
