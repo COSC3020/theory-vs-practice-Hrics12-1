@@ -40,8 +40,8 @@ Having $O(log_2n)$ as the asymptotic complexity for searching for a specific ele
   complexity suggests a different time.
   
   1.The asymptotic anaylisis is $log_n$ for a binary tree. If the binary search tree is not as efficent as $log n$ and is unbalanced it could result in a linear search time $O(n)$. For 10,000 elements this would increase the time dramatically.\
-  2.The hardware side where memory caches and CPUs are not taken into account. If the tree is stored on a hard drive on one machine and in the RAM on a second machine. You woudl see time increases because of the access times.
-  3. 
+  2.The hardware side where memory caches and CPUs are not taken into account. If the tree is stored on a hard drive on one machine and in the RAM on a second machine. You would see time increases because of the access times.
+  3. Even if were only searching the tree and not building it there could still be issues where you have high overhead in the function calls. It kind of ties into the second reason. If you are continuously allocating or deallocating memory during the search then it will impact the search time.
 
  
 
