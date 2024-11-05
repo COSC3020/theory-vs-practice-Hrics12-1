@@ -3,15 +3,28 @@
 - List 3 reasons why asymptotic analysis may be misleading with respect to
   actual performance in practice.
 
-  1.Dropping constants and lower order terms 2.Input size:\
-  \
-  We drop and disregard the lower order terms when doing asymptotic analysis and these could have actual impact on performance in real practice. So let's say we have $3n^3 + 2n^2 + 50n + 100$. When you do asymptotic analysis we are only focusing on the term with the highest growth rate. $3n^3$ has the highest growth rate. We would disregard the lower order terms and constant giving us a complexity of $O(n^3)$. This is good for large input sizes but the lower order terms and the constant could effect this with smaller input sizes. If this algorithm had a constant factor of 3 we would have $3n^3$ and we have a second algorithm that's $O(n^2)$ with a constant factor of 100.\
-    1st. $3(10^3) = 3000$\
-    2nd. $100(10^2) = 10,000$\
-  So the first algorithm is faster with a smaller input size, if we make the first input size the same as the second n=100, then we see the $n^3$ grows much faster and becomes slower then the 2nd algorithm. This is why input size matters and why the complexity can show the scaling of an algorithm but disregarding the constant factors can be misleading. An algorithm with a lower asymptotic complexity can be slower if it has a larger constant factor.
-     
+  
+
+  1. Input size matters becuase when doing the asymptotic analysis we focus on how the algorithm scales as the input size increases. When an algorithm takes a small input or even a medium size input the runtime can be seriously influenced by constant factors and lower order terms that have been disregarded. if I have an algorithm, $3n^3 + 2n^2 + 50n + 100$ you have a time complexity of $O(n^3)$ Then you have another algorithm with a time complexity of $O(n^2)$, $100n^2 + 50(100)+100$. If you take a small input size of $n=100$ the lower order terms in the first algorithm have a larger inpact on the operations being preformed. <br><br>
+  n=100<br> Algo $A_1$: $3(100^3)+2(100^2)+50(100)+100$ = 3,025,100 <br>
+  Algo $B_1$: $100(100^2)+50(100)+100$ = 1,005,100 <br><br>
+  n=1,000,000<br>
+  Algo $A_2$: $3(1,000,000^3)+2(1,000,000^2)+50(1,000,000)+100$ = $3.000002*10^{18}$<br>
+  Algo $B_2$: $100(1,000,000^2)+50(1,000,000)+ 100$ = $1.00000005 * 10^{14}$<br><br>
+  Lower order terms and constants:<br>
+  n=100 <br>
+  Algo $A_1$: $2(100^2)+50(100)+100$ = 25100 or .8297% of Algo $A_1$<br>
+  Algo $B_1$: $50(100)+100$ = 5100 or .5074% of Algo $B_1$ <br><br>
+  n=1,000,000<br>
+  Algo $A_2$: $2(1,000,000^2)+50(1.000,000)+100$ = $2.00005 * 10^{12}$ or .0000667% of Algo $A_2$ <br>
+  Algo $B_2$: $50(1,000,000)+100$ = $50000100$ or .00005% of Algo $B_2$<br><br>
+  You can see from the percentages that as the input size grows the lower order terms and constants have a much smaller impact on the amount of operations the algorithm does. So in practice you need to know how impactuful your lower order terms and constants will be based on individual circumstances.
+
 
 2. In asymptotic analiysis we treat all constants at the same rate. When in practice constants can take different amounts of time. Like comparing strings takes longer then comparing integers.
+
+
+3. Hardware as an issue. Asymptotic analysis does not take into account for hardware specifics like your cache and or memory hierarchy. Running an algorithm and getting a certain Big-O bound on one machine could be significantly different on a different machine.
     
 
 - Suppose finding a particular element in a binary search tree with 1,000
