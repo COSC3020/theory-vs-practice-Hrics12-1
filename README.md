@@ -41,9 +41,7 @@ Having $O(log_2n)$ as the asymptotic complexity for searching for a specific ele
   
   1.The asymptotic anaylisis is $log_n$ for a binary tree. If we assume that the element is near the begining of the tree and also assume good implentation then theoretically it should take around 6.7 secs. If the tree is not balanced, then the height of the tree could be larger then $log_2(n)$ and doesn't grow logarithmically. This is a reason why it could take 100 secs.
 
-  2. Computing hardware is an obvious reason this could happen. If you run the same search on two different machines with different specs then this could cause the difference in analysis because the hardware is not taken into account for the asymptotic complexity. This is becuase we assume that each comparison in the binary tree takes the exact same amount of time. 
-
-  3.If the tree is also not implemented correctly then it could cause it to do unnescessary rebalancing and redundant checks that would cause the significant time increase.
+ 
 
 Add your answers to this markdown file.
 
