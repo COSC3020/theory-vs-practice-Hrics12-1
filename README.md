@@ -20,11 +20,9 @@
   Algo $B_2$: $50(1,000,000)+100$ = $50000100$ or .00005% of Algo $B_2$<br><br>
   You can see from the percentages that as the input size grows the lower order terms and constants have a much smaller impact on the amount of operations the algorithm does. So in practice you need to know how impactuful your lower order terms and constants will be based on individual circumstances.
 
+This also goes into seeing a algorithm with a smaller time complexity but a large constant going slower then an algorithm with a worse time complexity and smaller constant. 
 
-2. In asymptotic analiysis we treat all constants at the same rate. When in practice constants can take different amounts of time. Like comparing strings takes longer then comparing integers.
-
-
-3. Hardware as an issue. Asymptotic analysis does not take into account for hardware specifics like your cache and or memory hierarchy. Running an algorithm and getting a certain Big-O bound on one machine could be significantly different on a different machine.
+ Hardware as an issue. Asymptotic analysis does not take into account for hardware specifics like your cache and or memory hierarchy. Running an algorithm and getting a certain Big-O bound on one machine could be significantly different on a different machine.
     
 
 - Suppose finding a particular element in a binary search tree with 1,000
@@ -39,9 +37,9 @@ Having $O(log_2n)$ as the asymptotic complexity for searching for a specific ele
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
   
-  1.The asymptotic anaylisis is $log_n$ for a binary tree. If the binary search tree is not as efficent as $log n$ and is unbalanced it could result in a linear search time $O(n)$. For 10,000 elements this would increase the time dramatically.\
-  2.The hardware side where memory caches and CPUs are not taken into account. If the tree is stored on a hard drive on one machine and in the RAM on a second machine. You would see time increases because of the access times.
-  3. Even if were only searching the tree and not building it there could still be issues where you have high overhead in the function calls. It kind of ties into the second reason. If you are continuously allocating or deallocating memory during the search then it will impact the search time.
+  1. There could be an issue with memory so the computer is running out of memory and not making the correct choices.
+  2. There could be strings mixed in with integers. Strings are going to take longer to process.
+  3. Not using the same device to run the same algorithm. Different computer with different specs could see a decrease in proccessing time.
 
  
 
