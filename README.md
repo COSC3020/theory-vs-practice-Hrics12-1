@@ -18,7 +18,7 @@
   n=1,000,000<br>
   Algo $A_2$: $2(1,000,000^2)+50(1.000,000)+100$ = $2.00005 * 10^{12}$ or .0000667% of Algo $A_2$ <br>
   Algo $B_2$: $50(1,000,000)+100$ = $50000100$ or .00005% of Algo $B_2$<br><br>
-  You can see from the percentages that as the input size grows the lower order terms and constants have a much smaller impact on the amount of operations the algorithm does. So in practice you need to know how impactuful your lower order terms and constants will be based on individual circumstances.
+  You can see from the percentages that as the input size grows the lower order terms and constants have a much smaller impact on the amount of operations the algorithm does. So in practice you need to know how impactful your lower order terms and constants will be based on individual circumstances.
 
 This also goes into seeing a algorithm with a smaller time complexity but a large constant going slower then an algorithm with a worse time complexity and smaller constant. 
 
@@ -37,8 +37,8 @@ Having $O(log_2n)$ as the asymptotic complexity for searching for a specific ele
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
   
-  1. There could be an issue with memory so the computer is running out of memory and not making the correct choices.
-  2. There could be strings mixed in with integers. Strings are going to take longer to process.
+  1. There could be an issue with memory so the computer is running out of memory and make decisions that aren't the most efficent.
+  2. There could be strings mixed in with integers. Strings are going to take longer to process. Because you're potentially going through ten times the amount of elements the ratio of strings and integers being processed could be higher, resulting in more process time for more strings.
   3. Not using the same device to run the same algorithm. Different computer with different specs could see a decrease in proccessing time.
 
  
