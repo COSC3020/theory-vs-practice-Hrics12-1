@@ -37,7 +37,7 @@ Having $O(log_2n)$ as the asymptotic complexity for searching for a specific ele
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
   
-  1. There could be an issue with memory so the computer is running out of memory and make decisions that aren't the most efficent.
+  1. There could be an issue with memory so the computer is running out of memory. Having fragmented data because the memory is being swapped or paged to a disk drive if there isn't enough RAM for the larger data set
   2. There could be strings mixed in with integers. Strings are going to take longer to process. Because you're potentially going through ten times the amount of elements the ratio of strings and integers being processed could be higher, resulting in more process time for more strings.
   3. Not using the same device to run the same algorithm. Different computer with different specs could see a decrease in proccessing time.
 
