@@ -41,6 +41,7 @@ Having $O(log_2n)$ as the asymptotic complexity for searching for a specific ele
   2. Maybe the impact of an unbalanced tree isn't as noticable with 1000 elements as it is with 10,000 elements. If it was unbalanced and it was making linear comparisons, you would expect the 10,000 elements to take 50 seconds. But the unbalance might not be uniform and have larger strucural inefficencies due to the increase in list size. This could account for the increase in time being 100 secs and not the linear 50 secs.
   3. Not using the same device to run the same algorithm. Different computer with different specs could see a decrease in proccessing time.
 
+I also think it's a combonation of these things, that is causing the issue.
  
 
 Add your answers to this markdown file.
