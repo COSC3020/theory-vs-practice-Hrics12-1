@@ -38,7 +38,7 @@ Having $O(log_2n)$ as the asymptotic complexity for searching for a specific ele
   complexity suggests a different time.
   
   1. There could be an issue with memory so the computer is running out of memory. Having fragmented data because the memory is being swapped or paged to a disk drive if there isn't enough RAM for the larger data set. As the input grows the amount of memory needed is also increased. Yes, the growth is not linear but logaritmic. Even if the growth is not 10 times more the growth added logarithmic can still be the straw that breaks the camels back. Causing more overhead and issues with transfering data between RAM and disk space.
-  2. There could be strings mixed in with integers. Strings are going to take longer to process. Because you're potentially going through ten times the amount of elements the ratio of strings and integers being processed could be higher, resulting in more process time for more strings.
+  2. Maybe the impact of an unbalanced tree isn't as noticable with 1000 elements as it is with 10,000 elements. If it was unbalanced and it was making linear comparisons, you would expect the 10,000 elements to take 50 seconds. But the unbalance might not be uniform and have larger strucural inefficencies due to the increase in list size. This could account for the increase in time being 100 secs and not the linear 50 secs.
   3. Not using the same device to run the same algorithm. Different computer with different specs could see a decrease in proccessing time.
 
  
